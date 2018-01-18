@@ -4,12 +4,12 @@ public enum Color {White, Black};
 
 public class Player
 {
-	Color color;
-	int score;
+    Color color;
+    int score;
 
-	public Player(Color color)
-	{
+    public Player(Color color)
+    {
         this.color = color;
-		this.score = 0;
-	}
+        this.score = 0;
+    }
 }
