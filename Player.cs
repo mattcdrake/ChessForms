@@ -1,15 +1,28 @@
 ﻿using System;
+using System.Collections.Generic;
 
-public enum Color {White, Black};
-
-public class Player
+namespace Chess
 {
-    Color color;
-    int score;
+    public enum Color {White, Black};
 
-    public Player(Color color)
+    public class Player
     {
-        this.color = color;
-        this.score = 0;
+        private List<Piece> pieces;
+        private Color color;
+        private int score;
+
+        public Player(Color color)
+        {
+            this.color = color;
+            this.score = 0;
+        }
+
+        public void InitBoard() 
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                pieces.Add(new Piece(PieceType.Pawn));
+            }
+        }
     }
 }
