@@ -11,6 +11,7 @@ SimpleChess is exactly that, a simple chess application for two players to play 
 ## Class Structure
 - Driver
 - Board
+- Square
 - Player
 - Game
 - Piece
@@ -20,6 +21,22 @@ SimpleChess is exactly that, a simple chess application for two players to play 
     - Bishop
     - Queen
     - King
+
+## Class Diagrams
+- Board
+    - Attributes
+        - 2d array of squares, each with information about which piece is on it
+    - Methods
+        - bool IsLegalMove(Piece, Square)
+        - bool IsPromotion(Piece, Square)
+        - bool IsCheckmate(Piece, Square)
+        - bool IsCheck(Piece, Square)
+- Piece
+    - Attributes
+        - Move pattern
+        - Promotable
+    - Methods
+
 
 ## Driver
 - Create window
@@ -51,6 +68,10 @@ SimpleChess is exactly that, a simple chess application for two players to play 
     - Check for capture
         - If so, delete captured piece, recalculate score
     - Move piece
+    - Check for promotion
+        - Prompt player for promotion
+        - Delete current piece object
+        - Create newly promoted piece object
     - Check for checkmate
         - If so, alert players & end game
     - Check for check
