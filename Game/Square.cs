@@ -1,5 +1,4 @@
 using System;
-using Piece.cs;
 
 namespace SimpleChess
 {

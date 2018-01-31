@@ -31,15 +31,25 @@ namespace SimpleChess
         // Creates a row of all pawns in the local 2d square array
         private void InitFrontRank(int rank)
         {
-            if (rank != 2 || rank != 6)
+            if (rank != 1 || rank != 6)
             {
                 throw new BadRankException("Bad rank supplied");
             }
 
             for (int i = 0; i < 8; i++)
             {
-                Squares[rank][i] = new Square(new Piece(Pawn));
+                Squares[rank,i] = new Square(new Pawn());
             }
+        }
+
+        private void InitBackRank(int rank)
+        {
+            if (rank != 0 || rank != 7)
+            {
+                throw new BadRankException("Bad rank supplied");
+            }
+
+            Squares[rank, 0] = new Square(new Rook());
         }
     }
 

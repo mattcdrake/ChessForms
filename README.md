@@ -36,6 +36,10 @@ SimpleChess is exactly that, a simple chess application for two players to play 
         - Move pattern
         - Promotable
     - Methods
+- Game
+    - Attributes
+        - Two players
+    - Methods
 
 
 ## Driver
