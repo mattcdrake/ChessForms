@@ -4,7 +4,6 @@
 SimpleChess is exactly that, a simple chess application for two players to play locally. I'm making it in order to get experience building a full game application from start to finish as well as a chance to learn Windows Forms.
 
 ## TODO
-
 ## Future Features
 - Drag pieces 
 
